@@ -69,6 +69,42 @@
         <td>async</td>
         <td> {{valorDePromesa | async }} </td>
       </tr>
+
+      <tr>       
+        <td> {{fecha}} </td>
+        <td>date</td>
+        <td> {{fecha | date }} </td>
+      </tr>
+
+      <tr>       
+        <td> {{fecha}} </td>
+        <td>date:'medium'</td>
+        <td> {{fecha | date:'medium' }} </td>
+      </tr>
+      <tr>       
+        <td> {{fecha}} </td>
+        <td>date:'MMMM - dd'</td>
+        <td> {{fecha | date:'MMMM - dd' }} </td>
+      </tr>
+      <tr>       
+        <td> {{nameBad}} </td>
+        <td>perzonalizado</td>
+        <td> {{nameBad | capitalizado }} </td>
+      </tr>
+      <tr>       
+        <td> {{nameBad}} </td>
+        <td>perzonalizado:false</td>
+        <td> {{nameBad | capitalizado:false }} </td>
+      </tr>
+      <tr>       
+        <td> {{pass}} - {{showPass}} </td>
+        <td>passwd: {{showPass}} <button (click)="showPass = !showPass"
+          class="btn btn-primary"
+          > <span *ngIf="showPass">Ocultar</span>
+          <span *ngIf="!showPass">Ver</span>
+        </button> </td>
+        <td> {{showPass | passwd:pass }} </td>
+      </tr>
     </tbody>
   </table>
 
@@ -83,6 +119,8 @@
     {{heroe | json}}
   </pre>
   
+  <h4>dom seguro</h4>
+
 
   <br><br><br><br><br><br><br><br><br><br>
 

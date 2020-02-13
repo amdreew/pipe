@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { resolve } from 'dns';
-import { reject } from 'q';
+
 
 @Component({
   selector: 'app-root',
@@ -27,12 +26,17 @@ export class AppComponent {
       casa: 'casa numero 7'
     }
   };
-
-
   // tslint:disable-next-line:no-shadowed-variable
   valorDePromesa = new Promise(  ( resolve , reject ) => {
 
     setTimeout( () => resolve('LLego la data!'), 3500 );
 
+
   });
+
+  fecha = new Date();
+  nameBad = 'Nombre esCiriTo mUY Mal';
+  video = 'ZRCdORJiUgU';
+  showPass = false;
+  pass = 'pruebaClave';
 }
